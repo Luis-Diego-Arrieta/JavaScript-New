@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me!</title>
+</head>
+<body>
+
+    <h1>About Me!</h1>
+
+
+<div id="resetting">
+
+    <div id="picture" style="height:100%; width:100%; display:none;">
+        <img src="./tool.jpeg" alt="This represents me!">
+    </div>
+        
+    
+    <div id="change">
+        <ul>
+            <li>Nickname: Luis<span id="nickname"></span></li>
+            <li>Favorites: Rock, Reading, Beach<span id="favorites"></span></li>
+            <li>Hometown: Santa Cruz, GTE<span id="hometown"></span></li>
+        </ul>
+    </div>
+
+
+</div>
+    
+    <button type="button" onclick="display()">Set Font Family</button>
+
+    <button onClick="showImage()">Show Me the Picture!!</button>
+
+    <input type = "button" value = "Reset Styles" onClick = "fun()"/>
+
+
+    <script>
+
+    function display() {
+        let element = document.getElementById("change");
+        element.style.color = "#FF0000";
+        document.getElementById("change").style.fontFamily = "Arial, sans-serif";
+        document.getElementById("change").style.fontSize = "x-large";
+    }
+
+    const showImage = () => {
+        document.getElementById("picture").style.display ='block';
+    }
+
+    function fun(){  
+   document.getElementById("resetting").reset();  
+    }  
+
+    </script>
+
+</body>
+</html>
